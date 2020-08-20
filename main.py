@@ -14,6 +14,7 @@ from model.stage import STAGE
 from tvqa_dataset import TVQADataset, pad_collate, prepare_inputs
 from config import BaseOptions
 
+sys.path.append('/data/TVQAplus/model')
 
 def train(opt, dset, model, criterion, optimizer, epoch, previous_best_acc, use_hard_negatives=False):
     dset.set_mode("train")
